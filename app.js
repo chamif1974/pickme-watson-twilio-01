@@ -32,12 +32,12 @@ app.post("/sms", twilio.webhook(twilio_auth_token), function (req, res) {
   var twiml = new twilio.TwimlResponse();
 
   console.log(req.body.MessageSid + " QUESTION: " + req.body.Body);
-  //doctor.ask(req.body.Body, function (answer) {
+  /*doctor.ask(req.body.Body, function (answer) {
     console.log(req.body.MessageSid + " ANSWER: " + answer);
 
     twiml.message(answer);
     res.send(twiml);
-  });
+  });*/
 
 });
 // start server on the specified port and binding host
