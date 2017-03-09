@@ -76,7 +76,7 @@ app.get("/sms", twilio.webhook(twilio_auth_token), function (req, res) {
 				contexts.splice(contextIndex,1);
 			}
 			
-			/*var client = require('twilio')(
+			var client = require('twilio')(
 			'ACcb05d8968a6f4d6a3bfd56811d696c19',
 			'6af780368fe871e2dab4955571a5256b'
 			);
@@ -90,17 +90,17 @@ app.get("/sms", twilio.webhook(twilio_auth_token), function (req, res) {
 				console.error(err.message);
 			}
 
-			});*/
-			console.log("sms.."+req.body.MessageSid);
+			});
+			/*console.log("sms.."+req.body.MessageSid);
   			var twiml = new twilio.TwimlResponse();
   			twiml.message(response.output.text[0]);
-    		res.send(twiml);
+    		res.send(twiml);*/
 		}
 	});
 	res.send('');
 
 
-  console.log(req.body.MessageSid + " QUESTION: " + req.body.Body);
+  //console.log(req.body.MessageSid + " QUESTION: " + req.body.Body);
   /*doctor.ask(req.body.Body, function (answer) {
     console.log(req.body.MessageSid + " ANSWER: " + answer);
 
