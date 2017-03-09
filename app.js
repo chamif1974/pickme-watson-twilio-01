@@ -37,10 +37,13 @@ var conversation = new ConversationV1({
 	
 //app.get("/sms", twilio.webhook(twilio_auth_token), function (req, res) {
 app.get("/sms",  function (req, res) {	
-  	var message = req.query.Body;
-	var number = req.query.From;
-	var twilionumber = req.query.To;
+  	//var message = req.query.Body;
+	//var number = req.query.From;
+	//var twilionumber = req.query.To;
 	
+	var message = 'make appoinment';
+	var number = '+94776186353';
+	var twilionumber = '+1 512-865-4719';
 	var context = null;
 	var index = 0;
 	var contextIndex = 0;
