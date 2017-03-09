@@ -71,11 +71,11 @@ app.get("/sms",  function (req, res) {
 				contexts[contextIndex].context=response.context;
 			}
 			
-			var intent = response.intents[0].intent;
+			/*var intent = response.intents[0].intent;
 			console.log(intent);
 			if(intent==="done"){
 				contexts.splice(contextIndex,1);
-			}
+			}*/
 			
 			var client = require('twilio')(
 			'ACcb05d8968a6f4d6a3bfd56811d696c19',
