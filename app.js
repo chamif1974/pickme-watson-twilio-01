@@ -22,8 +22,8 @@ var app = express();
 var appEnv = cfenv.getAppEnv();
 
 var twilio = require("twilio");
-var service = cfenv.getAppEnv().getService("twilio");
-var twilio_auth_token = service.credentials.authToken;
+//var service = cfenv.getAppEnv().getService("twilio");
+//var twilio_auth_token = service.credentials.authToken;
 //var doctor = require("../lib/doctor.js");
 var ConversationV1 = require('watson-developer-cloud/conversation/v1');
 var contexts = [];
@@ -35,7 +35,8 @@ var conversation = new ConversationV1({
 	});
 
 	
-app.get("/sms", twilio.webhook(twilio_auth_token), function (req, res) {
+//app.get("/sms", twilio.webhook(twilio_auth_token), function (req, res) {
+app.get("/sms",  function (req, res) {	
   	var message = req.query.Body;
 	var number = req.query.From;
 	var twilionumber = req.query.To;
